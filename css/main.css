@@ -1,0 +1,166 @@
+*{margin: 0; padding: 0;box-sizing: border-box;}
+html {overflow-x: hidden;scroll-behavior: smooth;}
+body {font-family: 'Metropolis'; display: flex; justify-content: center; align-items: center; min-height: 100vh;}
+h1{font-size: 50px;font-family: 'Metropolis';font-weight: 700;}
+h2 {font-size: 48px;font-family: 'Metropolis';font-weight: 600;color: #391C19;} 
+h3 {font-size: 25px;font-weight: 500;font-family: 'Metropolis';}
+h4{font-size: 17px;font-family: 'Metropolis';font-weight: 700;}
+p {font-size: 15px;font-family: 'Metropolis';font-weight: 400;}
+ul {padding-left: 0;list-style: none;}
+li {font-size: 15px;font-family: 'Metropolis';font-weight: 400;}
+label {font-size: 16px;font-weight: 500;font-family: 'Metropolis';}
+input {outline: none;font-weight: 400;font-size: 15px;font-family: 'Metropolis';color: #000;}
+select {outline: none;font-weight: 400;font-size: 15px;font-family: 'Metropolis';color: #000;}
+a {text-decoration: none;font-family: 'Metropolis';font-size: 15px;transition: 0.6s all ease-in-out;}
+a:hover, a:focus{text-decoration: none;}
+.compensate-for-scrollbar {position: inherit !important;margin: 0 !important;padding: 0 !important;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-Light.woff2') format('woff2'),url('../fonts/Metropolis-Light.woff') format('woff'),url('../fonts/Metropolis-Light.ttf') format('truetype');font-weight: 300;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis Extra';src: url('../fonts/Metropolis-ExtraLight.woff2') format('woff2'),url('../fonts/Metropolis-ExtraLight.woff') format('woff'),url('../fonts/Metropolis-ExtraLight.ttf') format('truetype');font-weight: 200;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis Extra';src: url('../fonts/Metropolis-ExtraLightItalic.woff2') format('woff2'),url('../fonts/Metropolis-ExtraLightItalic.woff') format('woff'),url('../fonts/Metropolis-ExtraLightItalic.ttf') format('truetype');font-weight: 200;font-style: italic;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-Thin.woff2') format('woff2'),url('../fonts/Metropolis-Thin.woff') format('woff'),url('../fonts/Metropolis-Thin.ttf') format('truetype');font-weight: 100;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis Extra';src: url('../fonts/Metropolis-ExtraBold.woff2') format('woff2'),url('../fonts/Metropolis-ExtraBold.woff') format('woff'),url('../fonts/Metropolis-ExtraBold.ttf') format('truetype');font-weight: bold;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-Medium.woff2') format('woff2'),url('../fonts/Metropolis-Medium.woff') format('woff'),url('../fonts/Metropolis-Medium.ttf') format('truetype');font-weight: 500;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis Semi';src: url('../fonts/Metropolis-SemiBoldItalic.woff2') format('woff2'),url('../fonts/Metropolis-SemiBoldItalic.woff') format('woff'),url('../fonts/Metropolis-SemiBoldItalic.ttf') format('truetype');font-weight: 600;font-style: italic;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-Regular.woff2') format('woff2'),url('../fonts/Metropolis-Regular.woff') format('woff'),url('../fonts/Metropolis-Regular.ttf') format('truetype');font-weight: normal;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-RegularItalic.woff2') format('woff2'),url('../fonts/Metropolis-RegularItalic.woff') format('woff'),url('../fonts/Metropolis-RegularItalic.ttf') format('truetype');font-weight: normal;font-style: italic;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-BlackItalic.woff2') format('woff2'),url('../fonts/Metropolis-BlackItalic.woff') format('woff'),url('../fonts/Metropolis-BlackItalic.ttf') format('truetype');font-weight: 900;font-style: italic;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-Black.woff2') format('woff2'),url('../fonts/Metropolis-Black.woff') format('woff'),url('../fonts/Metropolis-Black.ttf') format('truetype');font-weight: 900;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-Bold.woff2') format('woff2'),url('../fonts/Metropolis-Bold.woff') format('woff'),url('../fonts/Metropolis-Bold.ttf') format('truetype');font-weight: bold;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-MediumItalic.woff2') format('woff2'),url('../fonts/Metropolis-MediumItalic.woff') format('woff'),url('../fonts/Metropolis-MediumItalic.ttf') format('truetype');font-weight: 500;font-style: italic;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-BoldItalic.woff2') format('woff2'),url('../fonts/Metropolis-BoldItalic.woff') format('woff'),url('../fonts/Metropolis-BoldItalic.ttf') format('truetype');font-weight: bold;font-style: italic;font-display: swap;}
+@font-face {font-family: 'Metropolis Extra';src: url('../fonts/Metropolis-ExtraBoldItalic.woff2') format('woff2'),url('../fonts/Metropolis-ExtraBoldItalic.woff') format('woff'),url('../fonts/Metropolis-ExtraBoldItalic.ttf') format('truetype');font-weight: bold;font-style: italic;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-LightItalic.woff2') format('woff2'),url('../fonts/Metropolis-LightItalic.woff') format('woff'),url('../fonts/Metropolis-LightItalic.ttf') format('truetype');font-weight: 300;font-style: italic;font-display: swap;}
+@font-face {font-family: 'Metropolis Semi';src: url('../fonts/Metropolis-SemiBold.woff2') format('woff2'),url('../fonts/Metropolis-SemiBold.woff') format('woff'),url('../fonts/Metropolis-SemiBold.ttf') format('truetype');font-weight: 600;font-style: normal;font-display: swap;}
+@font-face {font-family: 'Metropolis';src: url('../fonts/Metropolis-ThinItalic.woff2') format('woff2'),url('../fonts/Metropolis-ThinItalic.woff') format('woff'),url('../fonts/Metropolis-ThinItalic.ttf') format('truetype');font-weight: 100;font-style: italic;font-display: swap;}
+
+
+/* before rehta he circle card me or hover me */
+/* Css Work Pepsi Project */
+.card {
+    position: relative;
+    width:600px;
+    height: 350px;
+    border-radius: 20px;
+    transition: 0.5s;
+    border: none;
+}
+.card .card-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.card .card-circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d83131;
+    clip-path: circle( 120px at center);
+    transition: 0.5s;
+}
+
+.card:hover .card-circle::before {
+    clip-path: circle(400px at center);
+    background-color: #0065c3;
+}
+.card img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 300px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.card:hover img {
+    left: 70%;
+    height: 500px;
+}
+.card .content {
+    position: relative;
+    width: 50%;
+    padding: 20px 20px 20px 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    left: 5%;
+}
+
+.card:hover .content {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+}
+
+.content h3 {
+    color: #fff !important;
+    font-size: 2em;
+    line-height: 1em;
+}
+.content p {
+    margin-bottom: 30px;
+    color: #fff;
+}
+.content a {
+    position: relative;
+    color: #000;
+    background-color: #fff;
+    border-radius: 10px;
+    padding:15px;
+    font-weight: bold;
+
+}
+
+@media (max-width:991px) {
+    .card {
+        width: auto;
+        max-width: 350px;
+        align-items: flex-start;
+    }
+    .card:hover{
+        height: 600px;
+    }
+    .card .content {
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+    .card:hover img {
+        top: 70%;
+        left: 50%;
+        height: 250px;
+        bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 529px) {
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+}
+@media only screen and (min-width: 425px) and (max-width: 529px) {
+}
+@media only screen and (min-width: 530px) and (max-width: 767px) {
+}
+@media only screen and (min-width:768px) and (max-width: 991px) {
+}
+@media only screen and (min-width:992px) and (max-width: 1199px) {
+}
+@media only screen and (min-width:1260px) and (max-width: 1365px) {
+}
+@media only screen and (min-width:1366px) and (max-width: 1439px) {
+}
+@media only screen and (min-width: 1440px) and (max-width: 1599px){
+}
+@media only screen and (min-width: 1600px) and (max-width: 1800px){
+}
+@media only screen and (min-width: 1680px) and (max-width: 1919px){
+}
+@media only screen and (min-width: 2560px) {
+}
